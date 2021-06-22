@@ -1,0 +1,92 @@
+.main{
+    width: 90%;
+    margin: 70px auto;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__texts{
+        .main__title{
+            font-family: var(--Lora);
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 61.44px;
+        }
+
+        .main__paragraph {
+            width: 410px;
+            height: 145px;
+            margin-top: 40px;
+            margin-bottom: 48px;
+            font-family: var(--Montserrat);
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29.26px;
+        }
+
+        .main__button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-family: var(--Montserrat);
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21.94px;
+            color: var(--white);
+            cursor: pointer;
+
+            &:hover{
+                border-bottom: 2px solid var(--white);
+            }
+        }
+    }
+
+    &__bg{
+        position: relative;
+        .main__img{
+            width: 737px;
+            height: 555px;
+            border-radius: 8px;
+        }
+    }
+}
+
+@media(max-width: 675px){
+
+    .main{
+        width: 100%;
+        padding: 12px;
+        margin-top: 38px;
+        margin-bottom: 120px;
+        flex-direction: column;
+        &__texts{
+            .main__title{
+                font-size: 36px;
+                line-height: 46.08px;
+                margin-bottom: 25px;
+            }
+
+            .main__paragraph{
+                width: 60%;
+                height: 85px;
+                font-size: 14px;
+                line-height: 17.07px;
+            }
+
+            .main__button{
+                width: 100px;
+                height: 17px;
+                font-size: 14px;
+                line-height: 17.07px;
+            }
+        }
+
+        &__bg{
+            margin-top: 37px;
+            .main__img{
+                width: 100%;
+                height: 264.32px;
+            }
+        }
+    }
+}

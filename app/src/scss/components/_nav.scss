@@ -1,0 +1,85 @@
+.nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 77px;
+    padding-right: 77px;
+    margin-top: 46px;
+    &__logo{
+        border: 1px solid var(--white);
+        padding: 8px;
+        font-family: var(--CrimsonPro);
+        font-weight: 200;
+        line-height: 15.56px;
+        font-size: 14px;
+    }
+
+    &__links{
+        &-link{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21.94px;
+            padding: 8px;
+            margin-right: 86px;
+            color: var(--white);
+            &:hover{
+                border-bottom: 2px solid var(--white);
+            }
+        }
+    }
+
+    &__hamburger{
+        border: none;
+        outline: none;
+        font-weight: 400;
+        background-color: transparent;
+        color: var(--white);
+        font-size: 28.5px;
+        display: none;
+    }
+}
+
+@media(max-width: 675px){
+    .nav{
+        position: relative;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin: 0;
+        &__links{
+            width: 100%;
+            height: 100vh;
+            background-color: var(--black);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+
+            transform: translateY(-300%);
+            transition: transform .40s ease-in;
+            &-link{
+                margin-right: 0px;
+                margin-bottom: 32px;
+            }
+            
+            &.active{
+                transform: translateY(0%);
+                transition: transform .40s ease-in;
+            }
+        }
+
+        &__hamburger{
+            margin-right: 19px;
+            display: block;
+            z-index: 20;
+        }
+
+        &__logo{
+            margin-left: 19px;
+        }
+    }
+}
